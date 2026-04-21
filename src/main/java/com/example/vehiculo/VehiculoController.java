@@ -12,6 +12,11 @@ public class VehiculoController {
     @Autowired
     private VehiculoRepository repo;
 
+    @GetMapping("/")
+    public String home() {
+        return "API Vehiculo funcionando correctamente";
+    }
+
     @GetMapping
     public List<Vehiculo> listar() {
         return repo.findAll();
